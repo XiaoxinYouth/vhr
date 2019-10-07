@@ -12,14 +12,23 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://localhost:8082',
+        //目标服务器地址及端口
+        // target: 'http://39.97.96.187:8682',
+        // target: 'http://localhost:8082',
+        // 自己的服务器端口
+        target: 'http://182.92.117.159:8082',
+
         changeOrigin: true,
         pathRewrite: {
           '^/': ''
         }
       },
       '/ws/*': {
-        target: 'ws://127.0.0.1:8082',
+        //目标服务器地址及端口
+        // target: 'ws://39.97.96.187:8682',
+        // target: 'ws://127.0.0.1:8082',
+        // 自己的服务器端口
+        target: 'ws://182.92.117.159:8082',
         ws: true
       }
     },
